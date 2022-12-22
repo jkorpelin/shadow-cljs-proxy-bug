@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/main/cljs"]
+
+ :dependencies
+ [[reagent "1.1.1"]]
+
+ :dev-http {8280 {:root "resources/public"
+                  :proxy-url "http://localhost:8080"}}
+ 
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "resources/public/js/compiled"
+   :asset-path "/js/compiled/"
+   :modules {:app {:init-fn foo.core/init}}}}}
