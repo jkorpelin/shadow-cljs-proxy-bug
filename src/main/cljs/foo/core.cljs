@@ -11,6 +11,7 @@
     (rdom/unmount-component-at-node root-el)
     (rdom/render [#(foobar)] root-el)))
 
+
 (defn ^:dev/after-load init []
   (mount-root! {}))
 
